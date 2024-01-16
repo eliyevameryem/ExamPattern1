@@ -1,0 +1,36 @@
+﻿@using exam2.Models;
+
+@model ClientsSection
+
+<div class="col-md-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Default form</h4>
+            <p class="card-description">
+                Basic form layout
+            </p>
+            <form class="forms-sample" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label asp-for="formFile" for="exampleInputUsername1">ImageUrl</label>
+                    <input asp-for="formFile" class="form-control" placeholder="ImageUrl">
+                    <span asp-validation-for="formFile" style="color:red"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" for="exampleInputEmail1">Description</label>
+                    <input asp-for="Description" class="form-control" placeholder="Description">
+                    <span asp-validation-for="Description" style="color:red"></span>
+
+                </div>
+                <div class="form-group">
+                    <label asp-for="Title" for="exampleInputPassword1">Title</label>
+                    <input asp-for="Title" class="form-control" placeholder="Title">
+                    <span asp-validation-for="Title" style="color:red"></span>
+                </div>
+             
+              
+            
+                <button class="btn btn-light">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+﻿@using exam2.Models;
+@model List<ClientsSection>
+@{
+    int count = 0;
+}
+
+<div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Basic Table</h4>
+           <a class="btn btn-success" asp-controller="Section" asp-action="Create">Create</a>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Count</th>
+                            <th>Image</th>
+                            <th>Description</th>
+                            <th>Title</th>
+                            <th>Butten</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                            count++;
+                            <td>@count</td>
+                            <td>@item.ImageUrl</td>
+                            <td>@item.Description</td>
+                                <td>@item.Title</td>
+                                <td>
+                                    <a class="btn btn-info" asp-controller="Section" asp-action="Update" asp-route-id="Id">Update</a>
+                                    <a class="btn btn-danger" asp-controller="Section" asp-action="Delete" asp-route-id="Id">Delete</a>
+
+                                </td>
+
+
+
+                          
+                        </tr>
+                        }
+                      
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
